@@ -1,13 +1,13 @@
-#include "stdio.h"
-#include "math.h"
+#include <stdio.h>
+#include <math.h>
 
 #define M_PI 3.14159265359
 
-float calculateFormulaA(float x, float y, float z) {
+float functionA(float x, float y, float z) {
     return (1 + y) * ((x + y / (pow(x, 2) - 1)) / (pow(y, x - 2) + 1 / (pow(x, 2) + 4)));
 }
 
-float calculateFormulaB(float x, float y, float z) {
+float functionB(float x, float y, float z) {
     return x * (sin(atan(z)) + pow(tan(y), 2));
 }
 
@@ -28,8 +28,8 @@ int main() {
         printf("No value for A (ODZ: X != +-1)\n");
     }
     else {
-        float calculatedValueA = calculateFormulaA(x, y, z);
-        printf("Calculated value for A: %f\n", calculatedValueA);
+        float resultA = functionA(x, y, z);
+        printf("Calculated value for A: %f\n", resultA);
     }
 
     float modded = fmod(y * (2 / M_PI), 2);
@@ -40,8 +40,8 @@ int main() {
         }
     }
 
-    float calculatedValueB = calculateFormulaB(x, y, z);
-    printf("Calculated value for B: %f\n", calculatedValueB);
+    float resultB = functionB(x, y, z);
+    printf("Calculated value for B: %f\n", resultB);
 
     return 0;
 }
