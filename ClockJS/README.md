@@ -1,4 +1,4 @@
 # Clock on JavaScript
-**This is my little project of a clock on javascript**
+**This is a little project that i have found - a clock on JavaScript**
 
 [Clock](https://artemkaxdxd.github.io/Projects/ClockJS/index.html)
